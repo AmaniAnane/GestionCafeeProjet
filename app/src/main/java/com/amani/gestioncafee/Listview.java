@@ -62,7 +62,7 @@ public class Listview extends AppCompatActivity {
                 listItems,
                 R.layout.activity_listview,
                 new String[]{"title", "prix", "icon"},
-                new int[]{R.id.title, R.id.blasa,R.id.flous, R.id.icon});
+                new int[]{R.id.title,R.id.flous, R.id.icon});
         // Association de l’adapter à la liste
         maListViewPerso.setAdapter(adapter);
 

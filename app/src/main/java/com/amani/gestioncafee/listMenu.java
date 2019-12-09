@@ -19,8 +19,8 @@ import java.util.HashMap;
 public class listMenu extends AppCompatActivity {
     private static final int CODE_DE_MON_ACTIVITE = 1;
     private final String EXTRA_TITLE = "title";
-    private final String EXTRA_PRIX = "lieu";
-    private final String EXTRA_LIEU = "prix";
+
+    private final String EXTRA_PRIX = "prix";
 
 
     private ListView maListViewPerso;
@@ -75,7 +75,7 @@ public class listMenu extends AppCompatActivity {
                 listItems,
                 R.layout.activity_listview,
                 new String[]{"title",  "prix", "icon"},
-                new int[]{R.id.title, R.id.blasa, R.id.flous, R.id.icon});
+                new int[]{R.id.title, R.id.flous, R.id.icon});
         // Association de l’adapter à la liste
         maListViewPerso.setAdapter(adapter);
         // Interaction avec les items de la liste
@@ -92,7 +92,7 @@ public class listMenu extends AppCompatActivity {
                 // Cela fonctionne plus ou moins comme une HashMap,
                 // on entre une clef et sa valeur en face
                 oBundle.putString(EXTRA_TITLE, item.get("title"));
-                oBundle.putString(EXTRA_LIEU, item.get("lieu"));
+                
                 oBundle.putString(EXTRA_PRIX, item.get("prix"));
 
 
