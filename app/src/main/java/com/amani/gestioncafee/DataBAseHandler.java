@@ -69,7 +69,7 @@ public class DataBAseHandler extends SQLiteOpenHelper {
     String getsignup(String username){
         SQLiteDatabase db = this.getReadableDatabase();
         //String selectquery="SELECT * FROM TABLE_REGISTER";
-        Cursor cursor=db.query(TABLE_SIGNUP,null,  "email=?",new String[]{username},null, null, null, null);
+        Cursor cursor=db.query(TABLE_SIGNUP,null,  "Username=?",new String[]{username},null, null, null, null);
 
 
         if(cursor.getCount()<1){
