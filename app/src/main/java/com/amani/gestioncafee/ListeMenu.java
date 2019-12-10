@@ -1,16 +1,17 @@
 package com.amani.gestioncafee;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import android.content.Intent;
-
 
 
 public class ListeMenu extends AppCompatActivity {
@@ -84,4 +85,33 @@ public class ListeMenu extends AppCompatActivity {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerViewMenu.getContext(), DividerItemDecoration.VERTICAL);
         recyclerViewMenu.addItemDecoration(dividerItemDecoration);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.Français:
+                startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
+                return true;
+            case R.id.Anglais:
+                startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
+                return true;
+            case R.id.se_décoonecter:
+                onDestroy();
+                Intent intent = new Intent(ListeMenu.this, MainActivity.class);
+                startActivity(intent);
+                return true;
+
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }
