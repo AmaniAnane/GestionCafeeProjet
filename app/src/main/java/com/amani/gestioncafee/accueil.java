@@ -26,7 +26,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent= new Intent(accueil.this,ListeMenu.class);
-                intent.putExtra("mess", R.id.COFFEE);
+                intent.putExtra("mess", "COFFEE");
                 startActivity(intent);
 
 
@@ -41,7 +41,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent= new Intent(accueil.this,ListeMenu.class);
-                intent.putExtra("mess", R.id.BREAKFAST);
+                intent.putExtra("mess", "BREAKFAST");
                 startActivity(intent);
 
 
@@ -55,7 +55,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent= new Intent(accueil.this,ListeMenu.class);
-                intent.putExtra("mess", R.id.DRINKS);
+                intent.putExtra("mess", "DRINKS");
                 startActivity(intent);
 
 
@@ -69,7 +69,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent= new Intent(accueil.this,ListeMenu.class);
-                intent.putExtra("mess", R.id.DESERT);
+                intent.putExtra("mess", "DESERT");
                 startActivity(intent);
 
 

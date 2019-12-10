@@ -9,6 +9,8 @@ import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import android.content.Intent;
+
 
 
 public class ListeMenu extends AppCompatActivity {
@@ -21,13 +23,52 @@ public class ListeMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_menu);
-
-
+        Intent intent = getIntent();
         List<Menu> listeMenus = new ArrayList<Menu>();
+        if (intent != null) {
+
+
+            if (intent.hasExtra("mess")) {
+                String res = intent.getStringExtra("mess");
+
+                if( res.equals("COFFEE"))
+                {
+                    listeMenus= Menu.getAllCaffee();
+
+                }
+                else
+                {
+                    if( res.equals("BREAKFAST"))
+                    {
+                        listeMenus= Menu.getAllBrekfest();
+
+                    }
+                    else
+                    {
+                        if( res.equals("DESERT"))
+                        {
+                            listeMenus= Menu.getAllDisert();
+
+                        }
+                        else
+                        {
+                            if( res.equals("DRINKS"))
+                            {
+                                listeMenus= Menu.getAllDrinke();
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+       /* List<Menu> listeMenus = new ArrayList<Menu>();
         Menu m=new Menu("Caffee Turk","2500",R.drawable.aa);
         listeMenus.add(m);
         m=new Menu("Cafffe Direct","1500",R.drawable.a);
-        listeMenus.add(m);
+        listeMenus.add(m);*/
         // On récupère notre RecyclerView via son id
         recyclerViewMenu = findViewById(R.id.menu_recyclerview);
 
