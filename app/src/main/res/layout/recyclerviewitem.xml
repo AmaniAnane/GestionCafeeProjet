@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,7 +10,7 @@
         android:layout_gravity="center_vertical"
         android:contentDescription=""
         android:padding="10dp" />
-<LinearLayout
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -20,29 +19,20 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/nom_hotel"
+            android:id="@+id/titre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lieu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
 
         <TextView
             android:id="@+id/prix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/btn_reserver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="reserver" />
 
-</LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
