@@ -23,7 +23,7 @@ public class ListeMenu extends AppCompatActivity {
         setContentView(R.layout.activity_liste_menu);
 
 
-        List<Menu> listeMenus = new ArrayList<>();
+        List<Menu> listeMenus = new ArrayList<Menu>();
         Menu m=new Menu("Caffee Turk","2500",R.drawable.aa);
         listeMenus.add(m);
         m=new Menu("Cafffe Direct","1500",R.drawable.a);
