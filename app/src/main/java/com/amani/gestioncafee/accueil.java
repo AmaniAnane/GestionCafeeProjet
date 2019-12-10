@@ -26,11 +26,58 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent= new Intent(accueil.this,ListeMenu.class);
+                intent.putExtra("mess", R.id.COFFEE);
                 startActivity(intent);
+
+
 
 
             }
         });
+
+        BREAKFAST=findViewById(R.id.BREAKFAST);
+        BREAKFAST.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(accueil.this,ListeMenu.class);
+                intent.putExtra("mess", R.id.BREAKFAST);
+                startActivity(intent);
+
+
+
+
+            }
+        });
+        DRINKS=findViewById(R.id.DRINKS);
+        DRINKS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(accueil.this,ListeMenu.class);
+                intent.putExtra("mess", R.id.DRINKS);
+                startActivity(intent);
+
+
+
+
+            }
+        });
+        DESERT=findViewById(R.id.DESERT);
+        DESERT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(accueil.this,ListeMenu.class);
+                intent.putExtra("mess", R.id.DESERT);
+                startActivity(intent);
+
+
+
+
+            }
+        });
+
     }
 
 }
